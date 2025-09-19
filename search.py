@@ -138,7 +138,7 @@ class Search:
             index="my_documents",
             query={"bool": {"must": must, **filters}},
             aggs={
-                "category-agg": {"terms": {"field": "category.keyword"}},
+                "category-agg": {"terms": {"field": "category"}},
                 "year-agg": {
                     "date_histogram": {"field": "updated_at", "calendar_interval": "year", "format": "yyyy"}
                 },
