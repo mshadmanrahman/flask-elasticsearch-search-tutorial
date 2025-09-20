@@ -10,9 +10,9 @@
           <select class="form-select" name="mode">
             <option value="bm25" {% if mode=='bm25' %}selected{% endif %}>BM25</option>
             <option value="knn" {% if mode=='knn' %}selected{% endif %}>kNN (vector)</option>
-            <option value="hybrid" {% if mode=='hybrid' %}selected{% endif %}>Hybrid #1 (BM25 + kNN RRF)</option>
+            <option value="hybrid" {% if mode=='hybrid' %}selected{% endif %}>Hybrid (BM25 + kNN RRF)</option>
             <option value="elser" {% if mode=='elser' %}selected{% endif %}>ELSER (sparse semantic)</option>
-            <option value="hybrid_lexical_elser" {% if mode=='hybrid_lexical_elser' %}selected{% endif %}>Hybrid #2 (BM25 + ELSER RRF)</option>
+            <option value="hybrid_elser" {% if mode=='hybrid_elser' %}selected{% endif %}>Hybrid (BM25 + ELSER Sub-Searches)</option>
           </select>
         </div>
         <div class="col-sm-auto">
@@ -40,12 +40,12 @@
                     <div class="col-sm-auto my-auto">
                         Showing results {{ from_ + 1 }}-{{ from_ + results|length }} out of {{ total }}.
                     </div>
-                    {% if from_ > 0 and mode == 'bm25' %}
+                    {% if from_ > 0 and mode in ['bm25', 'hybrid_elser'] %}
                         <div class="col-sm-auto my-auto">
                             <a href="javascript:history.back(1)" class="btn btn-primary">← Previous page</a>
                         </div>
                     {% endif %}
-                    {% if from_ + results|length < total and mode == 'bm25' %}
+                    {% if from_ + results|length < total and mode in ['bm25', 'hybrid_elser'] %}
                         <div class="col-sm-auto my-auto">
                             <form method="POST">
                                 <input type="hidden" name="query" value="{{ query }}">
