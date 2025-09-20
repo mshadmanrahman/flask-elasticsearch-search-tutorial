@@ -2,7 +2,7 @@
 
 A comprehensive search tutorial demonstrating advanced search capabilities using Flask and Elasticsearch. This project implements 5 different search modes including traditional BM25, dense vector search (kNN), sparse semantic search (ELSER), and hybrid approaches with full Elastic Cloud integration.
 
-## 🚀 Features
+## Features
 
 - **5 Search Modes**:
   - **BM25**: Traditional full-text search with multi-field matching
@@ -22,7 +22,7 @@ A comprehensive search tutorial demonstrating advanced search capabilities using
   - **Responsive UI** - Modern Bootstrap interface with search mode selection
   - **Real-time Search** - Live search with aggregations and filters
 
-## 🛠️ Setup
+## Setup
 
 ### Prerequisites
 - Python 3.8+
@@ -73,7 +73,7 @@ A comprehensive search tutorial demonstrating advanced search capabilities using
 8. **Open your browser**:
    Navigate to `http://localhost:5001`
 
-## 📊 Search Modes Explained
+## Search Modes Explained
 
 ### BM25 (Traditional Search)
 - Uses Elasticsearch's built-in BM25 algorithm
@@ -109,7 +109,7 @@ A comprehensive search tutorial demonstrating advanced search capabilities using
 - Provides robust semantic search capabilities
 - Ensures reliable search experience
 
-## 🔧 Configuration
+## Configuration
 
 ### Environment Variables
 - `ELASTIC_CLOUD_ID`: Your Elastic Cloud deployment ID
@@ -121,7 +121,7 @@ A comprehensive search tutorial demonstrating advanced search capabilities using
 - **Model ID**: `.elser_model_2` (ELSER v2)
 - **Minimum Score**: Dynamic based on search mode
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 ├── app.py                 # Flask application with all routes
@@ -138,7 +138,7 @@ A comprehensive search tutorial demonstrating advanced search capabilities using
     └── elastic-logo.svg # Elasticsearch logo
 ```
 
-## 🎯 Usage Examples
+## Usage Examples
 
 ### Basic Search
 1. Enter a search query (e.g., "work from home", "team collaboration")
@@ -164,19 +164,19 @@ A comprehensive search tutorial demonstrating advanced search capabilities using
 - **"team collaboration"** - Test conceptual search capabilities
 - **"HR policies"** - Explore different search approaches
 
-## 🔍 Search Mode Differences
+## Search Mode Differences
 
 Different search modes excel at different types of queries:
 
 | Query Type | BM25 | kNN | ELSER | Hybrid |
 |------------|------|-----|-------|--------|
-| Exact keywords | ⭐⭐⭐ | ⭐⭐ | ⭐⭐ | ⭐⭐⭐ |
-| Synonyms | ⭐ | ⭐⭐⭐ | ⭐⭐⭐ | ⭐⭐⭐ |
-| Conceptual | ⭐ | ⭐⭐⭐ | ⭐⭐⭐ | ⭐⭐⭐ |
-| Phrase matching | ⭐⭐⭐ | ⭐⭐ | ⭐⭐ | ⭐⭐⭐ |
-| Semantic similarity | ⭐ | ⭐⭐⭐ | ⭐⭐⭐ | ⭐⭐⭐ |
+| Exact keywords | ★★★ | ★★ | ★★ | ★★★ |
+| Synonyms | ★ | ★★★ | ★★★ | ★★★ |
+| Conceptual | ★ | ★★★ | ★★★ | ★★★ |
+| Phrase matching | ★★★ | ★★ | ★★ | ★★★ |
+| Semantic similarity | ★ | ★★★ | ★★★ | ★★★ |
 
-## 🚨 Troubleshooting
+## Troubleshooting
 
 ### Common Issues
 1. **Connection Errors**: Verify your Elastic Cloud credentials in `.env`
@@ -189,7 +189,7 @@ Different search modes excel at different types of queries:
 - Verify your Elastic Cloud deployment is running
 - Ensure all dependencies are installed correctly
 
-## 🤝 Contributing
+## Contributing
 
 1. Fork the repository
 2. Create a feature branch (`git checkout -b feature/amazing-feature`)
@@ -197,11 +197,11 @@ Different search modes excel at different types of queries:
 4. Push to the branch (`git push origin feature/amazing-feature`)
 5. Open a Pull Request
 
-## 📝 License
+## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 🙏 Acknowledgments
+## Acknowledgments
 
 - [Elasticsearch](https://www.elastic.co/) for the powerful search engine
 - [Flask](https://flask.palletsprojects.com/) for the lightweight web framework
@@ -209,20 +209,10 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - [Bootstrap](https://getbootstrap.com/) for the responsive UI framework
 - [Elastic Cloud](https://cloud.elastic.co/) for managed Elasticsearch
 
-## 📚 Additional Resources
+## Additional Resources
 
 - [Elasticsearch Documentation](https://www.elastic.co/guide/index.html)
 - [Flask Documentation](https://flask.palletsprojects.com/)
 - [ELSER Model Guide](https://www.elastic.co/guide/en/machine-learning/current/ml-nlp-elser.html)
 - [Reciprocal Rank Fusion](https://plg.uwaterloo.ca/~gvcormac/cormacksigir09-rrf.pdf)
 - [Elastic Cloud Setup](https://www.elastic.co/guide/en/cloud/current/ec-getting-started.html)
-
-## 🎉 Recent Updates
-
-- ✅ **Complete Elastic Cloud Integration** - Full support for managed Elasticsearch
-- ✅ **Enhanced Error Handling** - Robust fallbacks and graceful degradation
-- ✅ **Improved UI** - Search mode selection and better user experience
-- ✅ **Faceted Search** - Category and year filtering with aggregations
-- ✅ **Pagination Support** - Complete pagination for all search modes
-- ✅ **Security Improvements** - Proper credential management and .gitignore
-- ✅ **Comprehensive Testing** - All search modes fully functional
