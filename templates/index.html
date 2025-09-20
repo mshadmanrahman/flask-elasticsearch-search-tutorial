@@ -40,12 +40,12 @@
                     <div class="col-sm-auto my-auto">
                         Showing results {{ from_ + 1 }}-{{ from_ + results|length }} out of {{ total }}.
                     </div>
-                    {% if from_ > 0 and mode in ['bm25', 'hybrid_elser'] %}
+                    {% if from_ > 0 and mode in ['bm25', 'knn', 'hybrid', 'elser', 'hybrid_elser'] %}
                         <div class="col-sm-auto my-auto">
                             <a href="javascript:history.back(1)" class="btn btn-primary">← Previous page</a>
                         </div>
                     {% endif %}
-                    {% if from_ + results|length < total and mode in ['bm25', 'hybrid_elser'] %}
+                    {% if from_ + results|length < total and mode in ['bm25', 'knn', 'hybrid', 'elser', 'hybrid_elser'] %}
                         <div class="col-sm-auto my-auto">
                             <form method="POST">
                                 <input type="hidden" name="query" value="{{ query }}">
